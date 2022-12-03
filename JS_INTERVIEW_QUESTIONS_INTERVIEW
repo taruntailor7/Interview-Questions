@@ -59,6 +59,26 @@ Ans readFileSync() method is an inbuilt application programming interface of fs 
 Q.3 What does process in node.js mean?
 Ans The process object in Node. js is a global object that can be accessed inside any module without requiring it. There are very few global objects or properties provided in Node. js and process is one of them. It is an essential component in the Node.
 
-Q.4 
+Q.4 Explain what node.js is?
+Ans Node. js (Node) is an open source, cross-platform runtime environment for executing JavaScript code. Node is used extensively for server-side programming.
+
+Q.5 What is the difference of JS from browser to JS on node.js
+Ans 
+S.No	Javascript	NodeJS
+1.	Javascript is a programming language that is used for writing scripts on the website. NodeJS is a Javascript runtime environment.
+2.	Javascript can only be run in the browsers.	We can run Javascript outside the browser with the help of NodeJS.
+3.	It is basically used on the client-side.	It is mostly used on the server-side.
+4.	Javascript is capable enough to add HTML and play with the DOM. 
+ 	Nodejs does not have capability to add HTML tags.
+5.	Javascript can run in any browser engine as like JS core in safari and Spidermonkey in Firefox. 
+ 	V8 is the Javascript engine inside of node.js that parses and runs Javascript. 
+6.	Javascript is used in frontend development.	Nodejs is used in server-side development.
+7.	Some of the javascript frameworks are RamdaJS, TypedJS, etc. 
+ 	Some of the Nodejs modules are Lodash, express etc. These modules are to be imported from npm. 
+ 
+8.	It is the upgraded version of ECMA script that uses Chrome’s V8 engine written in C++. 
+ 	Nodejs is written in C, C++ and Javascript.
+
+    
 
 
