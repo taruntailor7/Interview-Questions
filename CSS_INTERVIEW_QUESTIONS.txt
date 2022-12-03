@@ -190,5 +190,15 @@ id selector
 inline styling
 
 Q.15 How can we apply same styles to multiple selectors?
+Ans To group CSS selectors in a style sheet, use commas to separate multiple grouped selectors in the style. In this example, the style affects the p and div elements:
+div, p { color: #f00; }
+
+Q.16 What are the differences between relative and absolute in CSS?
 Ans 
+Relative	Absolute
+An element with position: relative; is positioned relative to its normal position.	An element with position: absolute; is positioned relative to the nearest positioned ancestor. However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.	Absolute positioned elements are removed from the normal flow, and can overlap elements.
+example : https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative	example: https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute
+
+
 
