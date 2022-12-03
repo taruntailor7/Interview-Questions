@@ -52,5 +52,143 @@ You need a layout-first design
 In simple terms
 "CSS grid is for layout, Flexbox is for alignment"
 
-Q.7 What are combinators? give examples of how you can use them ?
+Q.7 What does object-fit do?
+Ans The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+
+This property tells the content to fill the container in a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much space as possible".
+
+You can read more about it here.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+https://www.w3schools.com/css/css3_object-fit.asp
+
+Q.8 What does rotate do?
+Ans The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.
+
+rotate(angle) // Defines a 2D rotation, the angle is specified in the parameter
+You can give it a try here : Defines a 2D rotation, the angle is specified in the parameter
+
+For More Info Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate
+
+Q.9 What rule can be used to define animations
+Ans The @keyframes rule specifies the animation code.
+
+The animation is created by gradually changing from one set of CSS styles to another.
+
+During the animation, you can change the set of CSS styles many times.
+
+Specify when the style change will happen in percent, or with the keywords "from" and "to", which is the same as 0% and 100%. 0% is the beginning of the animation, 100% is when the animation is complete.
+
+Syntax :
+
+@keyframes animationname {keyframes-selector {css-styles;}}
+Take a look at following example.
+
+For More info :
+https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+
+Q.10 When working with attribute selectors, how can you select elements which contain a particular attribute value?
+Ans a[href*="en-US"] // selects an `a` tag which a particular href attribute value that has been asked  
+
+Q.11 What does @media do?
+Ans The @media rule is used in media queries to apply different styles for different media types/devices.
+
+Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
+
+You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).
+
+In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.
+
+syntax :
+
+body {
+  background-color: lightblue;
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: lavender;
+  }
+}
+
+Q.12 What can be used to override properties of an element
+Ans To override the CSS properties of a class using another class, we can use the !important directive. In CSS, !important means “this is important”, and the property:value pair that has this directive is always applied even if the other element has higher specificity.
+Syntax :
+
+element1 {
+    property-x: value_y  !important; /* This will be applied. */
+}
+element2 {
+    property-x: value_z; /* This will not be applied. */
+}
+html :
+ <p class="my_fav_font my_para">Cascading Style Sheets,fondly referred to as CSS, is a..</p>
+
+css :
+.my_fav_font {
+  font-family: 'Indie Flower', cursive !important;
+  /* This will be applied. */
+}
+
+.my_para {
+  font-family: 'Mansalva', cursive;
+  /* This will not be applied. */
+  text-align: justify;
+  background-color: powderblue;
+  font-size: 130%;
+}
+
+Q.13 How can you select every alternate elements in a list of elements using css?
+Ans Syntax :
+
+HTML
+
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+</ul>
+CSS
+
+ul{
+  list-style-type: none;
+  color: white;
+}
+li:nth-of-type(odd){ // or you can also use li:nth-child(odd)
+  background-color:blue;
+}
+li:nth-of-type(even){
+  background-color:red;
+}
+
+Q.14 What is the ranking of selectors with respect to specificity
+And Ranking from Low To High : 
+universal_selector, combinators selector, negation pseudo-class (:not) selector ( these selectors have no effects on specificity )
+element selector, pseudo element selector
+class selector, attribute selector, pseudo-class contained inside the overall selector
+id selector
+inline styling
+
+Q.15 How can we apply same styles to multiple selectors?
 Ans 
+
