@@ -79,6 +79,30 @@ S.No	Javascript	NodeJS
 8.	It is the upgraded version of ECMA script that uses Chrome’s V8 engine written in C++. 
  	Nodejs is written in C, C++ and Javascript.
 
-    
+
+Q.6 Write three different ways to reverse a string in Javascript? a. using inbuilt method, b. iteratively, c. recursively
+Ans a. Inbuit is reamaning???
+    b.  let str = "Tarun"
+        let reverseStr = "";
+        for(let i=str.length-1;i>=0;i--){
+            reverseStr+=str[i];
+        }
+        console.log(reverseStr);
+
+    c. function reverseString(str) {
+        if (str === "")
+            return "";
+        else
+            return reverseString(str.substr(1)) + str.charAt(0);
+        }
+        console.log(reverseString("hello"));
+
+
+Q.7 Write a program to check two objects are equal ( deep equal )
+Ans deep equal = deepEqual() method tests if two objects, and their child objects, are equal, using the == operator.
+Program : 
+
+Q.8 What is shallow equal?
+Ans A function for performing a shallow comparison between two objects or arrays. Two values have shallow equality when all of their members are strictly equal to the corresponding member of the other.
 
 
