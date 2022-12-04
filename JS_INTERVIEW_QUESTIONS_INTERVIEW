@@ -81,7 +81,30 @@ S.No	Javascript	NodeJS
 
 
 Q.6 Write three different ways to reverse a string in Javascript? a. using inbuilt method, b. iteratively, c. recursively
-Ans a. Inbuit is reamaning???
+Ans a.  function reverseString(str) {
+            return str.split("").reverse().join("");
+        }
+        reverseString("hello");
+
+        // Explanation in Detail.
+        function reverseString(str) {
+            // Step 1. Use the split() method to return a new array
+            var splitString = str.split(""); // var splitString = "hello".split("");
+            // ["h", "e", "l", "l", "o"]
+        
+            // Step 2. Use the reverse() method to reverse the new created array
+            var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+            // ["o", "l", "l", "e", "h"]
+        
+            // Step 3. Use the join() method to join all elements of the array into a string
+            var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+            // "olleh"
+            
+            //Step 4. Return the reversed string
+            return joinArray; // "olleh"
+        }
+        reverseString("hello");
+
     b.  let str = "Tarun"
         let reverseStr = "";
         for(let i=str.length-1;i>=0;i--){
@@ -89,7 +112,7 @@ Ans a. Inbuit is reamaning???
         }
         console.log(reverseStr);
 
-    c. function reverseString(str) {
+    c.  function reverseString(str) {
         if (str === "")
             return "";
         else
@@ -100,7 +123,50 @@ Ans a. Inbuit is reamaning???
 
 Q.7 Write a program to check two objects are equal ( deep equal )
 Ans deep equal = deepEqual() method tests if two objects, and their child objects, are equal, using the == operator.
-Program : 
+Program : The deepEqual() method from the library takes three parameters. The first two are the operands to be compared, and the third parameter is an optional options parameter. With the option, we can specify whether to use strict equality (===) or coercive equality (==) to compare the leaf nodes. The default option is to use coercive equality to compare leaf nodes.
+        const deepEqual = require('deep-equal');
+
+        const person1 = {
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": 35 
+        }
+
+        const person2 = {
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": "35" 
+        }
+
+        deepEqual(person1, person2); // true
+
+        Note that the age value is a number in the person1 object and a string in the person2 object. Since the strict option is false by default, the deep-equal library uses coercive equality on the leaf nodes, so this function returns true. If the strict parameter of the function is set to true, this method would return false.
+        const person2 = {
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": "35" 
+        }
+
+        deepEqual(person1, person2, {strict: true}); // false
+
+
+        // Another Way
+        The deepStrictEqual() method provided by the assert module is a built-in method in Node.js that takes three parameters: the two operands and a message as an optional parameter that will be used when an error is thrown if the two operands are not equal. This method will check for strict equality on leaf nodes. It will return undefined if the operands are equal and will throw an error if they are not deep and strictly equal.
+        const assert = require('assert');
+
+        const person1 = {
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": 35 
+        }
+
+        const person2 = {
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": 35 
+        }
+
+        console.log(assert.deepStrictEqual(person1, person2)); //true
 
 Q.8 What is shallow equal?
 Ans A function for performing a shallow comparison between two objects or arrays. Two values have shallow equality when all of their members are strictly equal to the corresponding member of the other.
