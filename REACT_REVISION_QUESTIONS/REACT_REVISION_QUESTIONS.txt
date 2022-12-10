@@ -34,6 +34,30 @@ Ans: Immutability of redux state is necessary since it allows detecting redux st
 Q.5  How does Redux use shallow equality checking?
 Ans: React-Redux uses shallow equality checking to determine whether the component it's wrapping needs to be re-rendered. To do this, it assumes that the wrapped component is pure; that is, that the component will produce the same results given the same props and state.
 
-Q.6  
+Q.6  How well does Redux “scale” in terms of performance and architecture?
+Ans: The work done by Redux generally falls into a few areas: processing actions in middleware and reducers, notifying subscribers after actions are dispatched, 
+    and updating UI components based on the state changes. React Redux in particular is heavily optimized to cut down on unnecessary re-renders, and React-Redux v5 shows 
+    noticeable improvements over earlier versions.
+    
+    Redux may not be as efficient out of the box when compared to other libraries. For maximum rendering performance in a React application, state should be stored in a normalized shape, many individual 
+    components should be connected to the store instead of just a few, and connected list components should pass item IDs to their connected child list items. This minimizes the overall amount of rendering 
+    to be done. Use of memoized selector functions is also an important performance consideration.
+
+Q.7  How does Redux compare to the React Context API?
 Ans: 
+
+Q.8  What is webpack ?
+Ans: webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser.
+
+Q.9  What is treeshaking ?
+Ans: Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code.
+     It relies on the import and export statements to detect if code modules are exported and imported for use between JavaScript files.
+
+Q.10 What are some features of using webpack?
+Ans: Features of Webpack: There are many features of webpack as follows:
+
+     Entry: We all know webpack makes a dependency graph and the starting of this graph is known as the entry or entry point. From the starting point of the dependency graph, it will follow all the dependencies to know what it has to bundle.
+     Output: Output tells webpack where to put the bundles that it had made and what will be its format.
+     Loaders: Loaders convert different types of files like images and CSS into a module before adding them to the dependency graph.
+     Plugins: Plugins provide functionality. It can provide much functionality like printing something on running the webpack, minifying, optimization of bundles, etc.
 
