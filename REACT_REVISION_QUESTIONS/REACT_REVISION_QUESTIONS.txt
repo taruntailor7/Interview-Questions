@@ -13,3 +13,20 @@ Ans: Consider someone who has given you a task to get some chocolate out of a sh
 
 Q.2  What is immutability?
 Ans: If an object is immutable, you cannot change its state or the value of its properties.
+
+Q.3  What does Object.freeze() do?
+Ans: The Object.freeze() method freezes an object. Freezing an object prevents extensions and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. freeze() returns the same object that was passed in.
+Eg : const obj = {
+        prop: 42
+     };
+
+     Object.freeze(obj);
+
+     obj.prop = 33;
+     // Throws an error in strict mode
+
+     console.log(obj.prop);
+     // expected output: 42
+
+Q.4  
+
