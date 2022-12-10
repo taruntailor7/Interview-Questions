@@ -10,3 +10,6 @@ Ans: Consider someone who has given you a task to get some chocolate out of a sh
     Reducer ( Shopkeeper ) has the knowledge of how to update the state ( get the chocolate ) and ensure states get updated ( you get the chocolate ). Reducers will always return to the new state.
 
     This was the whole process of geeting chocolate ( performing action ) by asking from shopkeeper ( using reducer to dispatch ) and geetting chocolate from grocery store ( Redux store ).
+
+Q.2  What is immutability?
+Ans: If an object is immutable, you cannot change its state or the value of its properties.
