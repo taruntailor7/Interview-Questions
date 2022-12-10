@@ -28,5 +28,9 @@ Eg : const obj = {
      console.log(obj.prop);
      // expected output: 42
 
-Q.4  
+Q.4  Why is immutability required by Redux?
+Ans: Immutability of redux state is necessary since it allows detecting redux state changes in an efficient manner. This implies that whenever we want to modify a redux state, we must create a new copy of it and do modifications to that copy - which then becomes the new redux state.
+
+Q.5  How does Redux use shallow equality checking?
+Ans: 
 
