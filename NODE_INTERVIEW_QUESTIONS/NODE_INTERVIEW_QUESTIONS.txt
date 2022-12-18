@@ -25,4 +25,11 @@ Sol: i) Node.js is asynchronous and single-threaded. This means that all I/O ope
      iii) The virtual machine in Node.js (V8) which is responsible for executing JavaScript consists of a JIT compilation. The virtual machine can take the source code to compile it into the machine code at runtime. 
          It means that all the “hot” functions that get called often than not can be compiled to the machine code thus boosting the execution speed.
 
+Q.5  What are CPU intensive tasks?
+Sol: They are complex user actions that eat up more RAM. A few of such processes can shut down your server entirely.
+     Handling CPU Intensive tasks:
+     i) More Powerful server
+     ii) Additional server
+     iii) Separate instance for each task
+     iv) AWS Lamba
 
