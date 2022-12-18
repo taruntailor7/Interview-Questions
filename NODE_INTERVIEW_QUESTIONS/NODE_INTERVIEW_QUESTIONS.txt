@@ -40,4 +40,12 @@ Sol:Node.js uses a small number of threads to handle many clients. In Node.js th
     i) Performance: If you regularly perform heavyweight activity on either type of thread, the throughput (requests/second) of your server will suffer.
     ii) Security: If it is possible that for certain input one of your threads might block, a malicious client could submit this "evil input", make your threads block, and keep them from working on other clients. This would be a Denial of Service attack.
 
-Q.7
+Q.7 What is the event loop?
+Sol:The event loop allows Node.js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded. It is done by assigning operations to the operating system whenever and wherever possible.
+    Features of Event Loop:
+    i) Event loop is an endless loop, which waits for tasks, executes them and then sleeps until it receives more tasks.
+    ii) The event loop executes tasks from the event queue only when the call stack is empty i.e. there is no ongoing task.
+    iii) The event loop allows us to use callbacks and promises.
+    iv) The event loop executes the tasks starting from the oldest first.
+
+Q.8 
