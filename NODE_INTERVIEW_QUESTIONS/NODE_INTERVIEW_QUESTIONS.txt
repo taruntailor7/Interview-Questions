@@ -18,4 +18,11 @@ sol: Node.js is based on an event-driven non-blocking I/O model. It refers to th
 Q.3  What is throughput?
 Sol: Throughput tells you how much data was transferred from a source at any given time.
 
+Q.4  How is Node js having high IO throughput?
+Sol: i) Node.js is asynchronous and single-threaded. This means that all I/O operations don’t block any other operations. It also means that you can send emails, read files, query the database, etc. all at the same time.
+     ii) Each request to the web-server won’t create a separate Node.js process. Although, one Node.js process would run at all times which would listen to the connections. JavaScript code is also executed in the process’ 
+         thread while all other I/O operations are executed in separate threads which results in almost no delays.
+     iii) The virtual machine in Node.js (V8) which is responsible for executing JavaScript consists of a JIT compilation. The virtual machine can take the source code to compile it into the machine code at runtime. 
+         It means that all the “hot” functions that get called often than not can be compiled to the machine code thus boosting the execution speed.
+
 
