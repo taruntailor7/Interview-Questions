@@ -5,3 +5,8 @@ Sol: Node.js is an open-source, cross-platform JavaScript runtime environment an
      You can use  I/O intensive web applications like video streaming sites. You can also use it for developing: Real-time web applications, 
      Network applications, General-purpose applications, and Distributed systems.
 
+Q.2  How is node js non-blocking?
+sol: Non-Blocking nature of node. js simply means that node. js proceeds with the execution of the program instead of waiting for long I/O 
+     operations or HTTP requests. i.e the non-JavaScript related code is processed in the background by different threads or by the browser 
+     which gets executed when node.
+
