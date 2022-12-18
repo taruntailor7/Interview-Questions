@@ -1,12 +1,21 @@
 Q.1  Explain in brief what is node js?
 Sol: Node.js is an open-source, cross-platform JavaScript runtime environment and library to run web applications outside the client’s browser. 
      It is used to create server-side web applications.
-     Node.js is perfect for data-intensive applications as it uses an asynchronous, event-driven model. 
-     You can use  I/O intensive web applications like video streaming sites. You can also use it for developing: Real-time web applications, 
-     Network applications, General-purpose applications, and Distributed systems.
+     Features of NodeJS: 
+     i) It’s easy to get started.
+     ii) It provides fast and highly scalable services.
+     iii) It uses JavaScript everywhere, so it’s easy for a JavaScript programmer to build back-end services using Node.js
+     iv) Source code cleaner and consistent.
+     v) Large ecosystem for open source library.
+     vi) It has Asynchronous or Non-blocking nature.
 
 Q.2  How is node js non-blocking?
-sol: Non-Blocking nature of node. js simply means that node. js proceeds with the execution of the program instead of waiting for long I/O 
-     operations or HTTP requests. i.e the non-JavaScript related code is processed in the background by different threads or by the browser 
-     which gets executed when node.
+sol: Node.js is based on an event-driven non-blocking I/O model. It refers to the program that does not block the execution of further operations. 
+     Non-Blocking methods are executed asynchronously. 
+     Asynchronously means that the program may not necessarily execute line by line. The program calls the function and move to the next operation 
+     and does not wait for it to return.
+
+Q.3  What is throughput?
+Sol: Throughput tells you how much data was transferred from a source at any given time.
+
 
