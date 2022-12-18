@@ -60,4 +60,8 @@ Sol:When Node.js finished executing the index.js in the main thread, the Node.js
     vi) Close Callback: This phase handles callbacks if a socket or handle is closed suddenly and the ‘close’ event will be emitted.
     vii) The microtask queue: Microtasks are executed after the main thread and each phase of the event loop. Microtasks created by process.nextTick() are executed before those created by then() and catch().
 
-Q.9 
+Q.9 What is process.tick?
+Sol:The process object is one of the few global objects provided by the NodeJS core API. It can be accessed from anywhere, thus its methods can also be accessed. Such is a method called process.nextTick() 
+    which is used by developers in real-time applications every day to defer the execution of a function until the next Event Loop Iteration.
+
+Q.10 
