@@ -1,0 +1,63 @@
+Q.1 What is Caching? How can you save money with Caching?
+Sol: A cache is a high-speed data storage layer which stores a subset of data, typically transient in nature, 
+    so that future requests for that data are served up faster than is possible by accessing the data’s primary 
+    storage location. Caching allows you to efficiently reuse previously retrieved or computed data.
+
+    By serving web pages to your users from a local web cache, you need to fetch less data from the internet, 
+    saving you bandwidth and money. Bandwidth savings translate into money in different ways in different organisations:
+    i) No need to upgrade to a higher bandwidth connection
+    ii) Direct cost savings on metered connections: less data traffic = lower bills
+    iii) Ability to add more users without increasing capacity.
+
+Q.2 What is load balancing?
+Sol: Load balancing is the method of distributing network traffic equally across a pool of resources that support an application. 
+    Modern applications must process millions of users simultaneously and return the correct text, videos, images, and other data 
+    to each user in a fast and reliable manner. To handle such high volumes of traffic, most applications have many resource servers 
+    with duplicate data between them. A load balancer is a device that sits between the user and the server group and acts as an 
+    invisible facilitator, ensuring that all resource servers are used equally.
+
+    Benefits of load balancing:
+    i) Application availability
+    ii) Application scalability
+    iii) Application security
+    iv) Application performance
+
+Q.3 What is CAP Theorem?
+Sol: The CAP theorem (also called Brewer’s theorem) states that a distributed database system can only guarantee two out of these 
+    three characteristics: Consistency, Availability, and Partition Tolerance.
+    i) Consistency: A system is said to be consistent if all nodes see the same data at the same time.
+    ii) Availability: Availability in a distributed system ensures that the system remains operational 100% of the time. Every request 
+        gets a (non-error) response regardless of the individual state of a node.
+    iii) Partition Tolerance: This condition states that the system does not fail, regardless of if messages are dropped or delayed 
+        between nodes in a system.
+
+Q.4 What is PACELC Theorem?
+Sol: The PACELC theorem states that in a system that replicates data:
+    i) if there is a partition (P), a distributed system can tradeoff between availability and consistency (A or C)
+    ii) else (E), when the system is running normally in the absence of partitions, the system can tradeoff between latency (L) and consistency (C).
+
+    The first part of the theorem (PAC) is the same as the CAP theorem, and the ELC is the extension. The whole thesis assumes we 
+    maintain high availability by replication. So, when there is a failure, CAP theorem prevails. But if not, we still have to consider 
+    the tradeoff between consistency and latency of a replicated system.
+
+Q.5 What is Eventual Consistency?
+Sol: Eventual Consistency is a guarantee that when an update is made in a distributed database, that update will eventually be reflected in all nodes 
+    that store the data, resulting in the same response every time the data is queried. With eventual consistency, results are less consistent early on, 
+    but they are provided much faster with low latency. Early results of eventual consistency data queries may not have the most recent updates because 
+    it takes time for updates to reach replicas across a database cluster.
+
+Q.6 What is Strong Consistency?
+Sol: Strong Consistency simply means the data must be strongly consistent at all times. All the server nodes across the world should contain the same 
+    value as an entity at any point in time. And the only way to implement this behavior is by locking down the nodes when being updated. 
+
+Q.7 What are the different types of databases?
+Sol: i) Hierarchical databases: his database follows the progression of data being categorized in ranks or levels, wherein data is categorized based 
+            on a common point of linkage.
+    ii) Network databases:  The child records are given the freedom to associate with multiple parent records. As a result, a network or net of 
+            database files linked with multiple threads is observed. 
+    iii) Object-oriented databases: . Information stored in a database is capable of being represented as an object which response as an instance 
+            of the database model. Therefore, the object can be referenced and called without any difficulty. 
+    iv) Relational databases: In this database, every piece of information has a relationship with every other piece of information. 
+            This is on account of every data value in the database having a unique identity in the form of a record.
+    v) NoSQL databases: A NoSQL database includes simplicity of design, simpler horizontal scaling to clusters of machines, and finer control over 
+            availability. MongoDB falls in the category of NoSQL document-based database. 
