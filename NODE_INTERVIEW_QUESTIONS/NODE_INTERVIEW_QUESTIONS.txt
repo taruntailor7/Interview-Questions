@@ -48,4 +48,16 @@ Sol:The event loop allows Node.js to perform non-blocking I/O operations despite
     iii) The event loop allows us to use callbacks and promises.
     iv) The event loop executes the tasks starting from the oldest first.
 
-Q.8 
+Q.8 What are different phases in event loop?
+Sol:When Node.js finished executing the index.js in the main thread, the Node.js event loop starts to execute the callbacks registered during the main thread’s runtime.
+    Callback queue: There’s a callback queue in each phase that stores callbacks to be executed in that phase. It’s very similar to the Task queue provided by a browser.
+    i) Timers: This is the first phase in the event loop. It finds expired timers in every iteration (also known as Tick) and executes the timers callbacks created by setTimout and setInterval.
+    ii) 
+    ii) Pending callbacks: It handles I/O callbacks deferred to the next iteration, such as handling TCP socket connection error.
+    iii) Idle, prepare: It’s only used internally.
+    iv) Poll: The Poll phase calculates the blocking time in every iteration to handle I/O callbacks. In this phase, the epoll_wait() system call is invoked (in Linux).
+    v) Check: This phase handles the callbacks scheduled by setImmediate(), and the callbacks will be executed once the Poll phase becomes idle.
+    vi) Close Callback: This phase handles callbacks if a socket or handle is closed suddenly and the ‘close’ event will be emitted.
+    vii) The microtask queue: Microtasks are executed after the main thread and each phase of the event loop. Microtasks created by process.nextTick() are executed before those created by then() and catch().
+
+Q.9 
