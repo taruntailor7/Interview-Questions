@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS POLYFILLS</title>
+</head>
+<body>
+    <h1>JS POLYFILLS</h1>
+</body>
+</html>
+<script>
+    var arr = [1,2,3,4,5]
+     
+    // myMap Fuction
+    Array.prototype.myMap = function(fn){
+        var res = [];
+        for(var i=0; i<this.length; i++){
+            var returnVal = fn(this[i], i, this);
+            res.push(returnVal);
+        }
+        return res;
+    }
+    // myForEach Fuction
+    Array.prototype.myForEach = function(fn){
+        var res = [];
+        for(var i=0; i<this.length; i++){
+            var returnVal = fn(this[i], i, this);
+            res.push(returnVal);
+        }
+        return res;
+    }
+    // myFilter Fuction
+    Array.prototype.myFilter = function(fn){
+        var res = [];
+        for(var i=0; i<this.length; i++){
+            var returnVal = fn(this[i],i, this);
+           if(returnVal){
+            res.push(this[i]);
+           }
+        }
+        return res;
+    }
+
+    // myReduce Fuction
+    Array.prototype.myReduce = function(fn, initial){
+        let acc = initial !== undefined ? initial : this[0];
+        //let acc = initial !== undefined ? initial : this[0];
+        let acc 
+        if(initial === undefined){
+            acc = this[0]
+        }
+        else{
+            acc = initial;
+        }
+        for(var i=1; i<this.length; i++){
+           acc =  fn(acc, this[i]);
+        }
+        return acc;
+    }
+    // Outputs
+    var res = arr.myMap(function(element, index, arr){
+        return element*2;
+    });
+    console.log(res);
+    var res = arr.myForEach(function(element, index, arr){
+        return element*2;
+    });
+    console.log(res);
+    var res = arr.myFilter(function(element, index, arr){
+        return element%2==1;
+    });
+    console.log(res);
+    var res = arr.myReduce(function(accumulator, element, index, arr){
+        return accumulator * element;
+    });
+    console.log(res);
+    // Chaining with Fuctions.
+    var res = arr.myFilter(function(element, index, arr){
+        return element%2==1;
+    }).myMap(function(element, index, arr){
+        return element*2;
+    }).myReduce(function(accumulator, element, index, arr){
+        return accumulator * element;
+    });
+    console.log(res);
+</script>
