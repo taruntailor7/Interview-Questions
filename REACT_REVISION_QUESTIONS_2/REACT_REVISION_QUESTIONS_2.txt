@@ -36,7 +36,7 @@ Sol: In functional and in object-oriented programming, an object is considered a
 
 Q5. Why do we need to spread the state in redux?
 Sol: Spread operator could be use to simplify passing react props down to a component. In react redux and reducer functions, spread operator are applied to compute new state without mutating state.
-    Like the Array Spread Operator, the Object Spread Operator creates a shallow clone of the original object. 
+     Like the Array Spread Operator, the Object Spread Operator creates a shallow clone of the original object. 
 
 Q.6 What does Object.freeze() do?
 Sol: The Object.freeze() method freezes an object. Freezing an object prevents extensions and makes existing properties non-writable and non-configurable. A frozen object can no longer 
