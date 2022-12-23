@@ -121,3 +121,16 @@ Q.16 What is flux architecture?
 Sol: Flux is AN architecture that Facebook uses internally when operating with React. It is not a framework or a library. It is merely a replacement quite an 
     architecture that enhances React and also the idea of unidirectional data flow.
 
+Q.17 What does React.useCallback do?
+Sol: The useCallback hook is used when you have a component in which the child is rerendering again and again without need. Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the callback that only changes if one of the dependencies 
+     has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
+     Syntax:
+        const memoizedCallback = useCallback(
+            () => {
+            doSomething(a, b);
+            },
+            [a, b],
+        );
+
+Q.18 
+Sol:
