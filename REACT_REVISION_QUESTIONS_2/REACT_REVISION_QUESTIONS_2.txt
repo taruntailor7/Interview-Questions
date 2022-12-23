@@ -132,5 +132,18 @@ Sol: The useCallback hook is used when you have a component in which the child i
             [a, b],
         );
 
-Q.18 
-Sol:
+Q.18 What does React.memo mean?
+Sol: React memo is a Higher Order Component (HOC). Memo API uses the memoization technique to optimize performance and makes the application faster. The Memo API avoids unnecessary re-renders in functional components and thereby optimizing the performance of the application.
+    The Memo API is a HOC that takes in another functional component as a prop, and it will re-render the component only if there is any change in the props.
+    Syntax: 
+        const MeomizedComponent = React.memo(function MyAnotherComponent(props) {});
+
+
+Q.19 What is Higher-order Components?
+Sol: Higher-order components or HOC is the advanced method of reusing the component functionality logic. It simply takes the original component and returns the enhanced component.
+    Syntax:
+        const EnhancedComponent = higherOrderComponent(OriginalComponent);
+    Reason to use Higher-Order component:
+       i) Easy to handle
+       ii) Get rid of copying the same logic in every component
+       iii) Makes code more readable
